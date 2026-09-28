@@ -1,0 +1,13 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource dv {
+    provider = "postgresql"
+    url      = env("PRISMA_DATABASE_URL")
+}
+
+model GiftCard {
+    id String @id @default(cuid())
+    value String 
+}
